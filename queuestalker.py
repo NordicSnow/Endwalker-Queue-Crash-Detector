@@ -25,4 +25,8 @@ while True:
         #sends telegram message to warn user
         params = {"chat_id": chatID, "text": "Lobby crashed! Log in to save it!"}
         r = requests.get(url + "/sendMessage", params=params)
+    
+    elif(currTime == 0.0):
+        params = {"chat_id": chatID, "text": "Login has seemingly been successful!"}
+        r = requests.get(url + "/sendMessage", params=params)
         break
