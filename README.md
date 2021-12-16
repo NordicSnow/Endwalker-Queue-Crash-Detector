@@ -1,4 +1,4 @@
-# Final Fantast XIV Endwalker Queue Crash Detection Script
+# Final Fantasy XIV Endwalker Queue Crash Detection Script
 a python script that maybe can detect when you 2002 out of the ffxiv login queue and notify you via telegram
 
 Input a telegram bot token, telegram user ID, and the file path to your FFXIV.cfg file (usually in your my games folder somewhere). 
