@@ -1,4 +1,11 @@
 import os, time, requests, getpass
+#optional, requires pyautogui installed
+'''from pyautogui import press
+def startJumping():
+    while True:
+        time.sleep(20)
+        press('space')'''
+
 
 #sets up http connection for telegram
 token = "token"
@@ -27,10 +34,12 @@ while True:
     if(currTime == 0.0):
         params = {"chat_id": chatID, "text": "Lobby event has occurred!\nThis can either mean a crash or a login. Check to make sure!"}
         r = requests.get(url + "/sendMessage", params=params)
+        #optional login holder
+        #startJumping()
         break
 
-    #this is an experimental mode that might be able to detect a crash sooner than the regular one. this was made based on my testing and I wouldn't call it reliable. 
-    #That said, there is no harm in uncommenting it. Just might send you messages erroneously.
+    #this is an experimental mode that might have been able to detect a crash sooner than the regular one. this was made based on my testing and it really didn't work. 
+    #That said, there is no harm in uncommenting it. It just is only good as a way to remind you the script is working.
     '''elif(currTime < 35):
         params = {"chat_id": chatID, "text": "Something strange has happened to the lobby. This could be nothing, or the start of an incident."}
         r = requests.get(url + "/sendMessage", params=params)
